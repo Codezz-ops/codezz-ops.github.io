@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", function() {
   const texts = [
     { text: "a software developer.", delay: 2000 },
     { text: "a penetration tester.", delay: 2000 },
-    { text: "a back-end developer.", delay: 2000 }
+    { text: "a back-end developer.", delay: 2000 },
+    { text: "an operating system developer.", delay: 2000}
   ];
 
   let currentIndex = 0;
