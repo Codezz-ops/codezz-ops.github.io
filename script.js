@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-  const textBeforeElement = document.getElementById("textBefore");
   const h1Element = document.getElementById("text1");
-  const pElement = document.getElementById("text2");
   const cursorElement = document.getElementById("cursor");
 
   const texts = [
