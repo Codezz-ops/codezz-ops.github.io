@@ -84,3 +84,69 @@ window.addEventListener("scroll", () => {
 
   lastScrollTop = currentScrollTop;
 });
+
+const apiLink1 = "https://api.github.com/users/codezz-ops/repos";
+const apiLink2 = "https://api.github.com/users/Nebrix/repos";
+
+async function fetchProjects(url) {
+ const response = await fetch(url, {
+    headers: {
+      'Accept': 'application/vnd.github+json',
+    },
+ });
+
+ if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+ }
+
+ const repos = await response.json();
+ return repos.map(repo => ({
+    title: repo.name,
+    description: repo.description,
+    url: repo.html_url,
+ }));
+}
+
+async function main() {
+ try {
+    const projects1 = await fetchProjects(apiLink1);
+    const projects2 = await fetchProjects(apiLink2);
+    const allProjects = [...projects1, ...projects2]; // Combine projects from both users
+
+    // Example: Select specific projects by index
+    const selectedProjects = [allProjects[5], allProjects[14], allProjects[9], allProjects[13], allProjects[16], allProjects[15]]; // Adjust indexes as needed
+    populateProjects(selectedProjects);
+ } catch (error) {
+    console.error('Error fetching projects:', error);
+ }
+}
+
+function populateProjects(projects) {
+ const projectsGrid = document.querySelector('.projects-grid');
+ projects.forEach(project => {
+    const projectDiv = document.createElement('div');
+    projectDiv.classList.add('project');
+
+    const projectTitle = document.createElement('h3');
+    projectTitle.classList.add('project-title');
+    projectTitle.textContent = project.title;
+
+    const projectDescription = document.createElement('p');
+    projectDescription.classList.add('project-description');
+    projectDescription.textContent = project.description;
+
+    const projectLink = document.createElement('a');
+    projectLink.classList.add('btn', 'btn-primary');
+    projectLink.href = project.url;
+    projectLink.target = '_blank';
+    projectLink.textContent = 'GitHub Repository';
+
+    projectDiv.appendChild(projectTitle);
+    projectDiv.appendChild(projectDescription);
+    projectDiv.appendChild(projectLink);
+
+    projectsGrid.appendChild(projectDiv);
+ });
+}
+
+main();
