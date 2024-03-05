@@ -176,13 +176,13 @@ function populateProjects(projects) {
         projectDiv.classList.add('project');
         var projectTitle = document.createElement('h3');
         projectTitle.classList.add('project-title');
-        projectTitle.textContent = project.title;
+        projectTitle.textContent = project.name;
         var projectDescription = document.createElement('p');
         projectDescription.classList.add('project-description');
         projectDescription.textContent = project.description;
         var projectLink = document.createElement('a');
         projectLink.classList.add('btn', 'btn-primary');
-        projectLink.href = project.url;
+        projectLink.href = project.html_url;
         projectLink.target = '_blank';
         projectLink.textContent = 'GitHub Repository';
         projectDiv.appendChild(projectTitle);
