@@ -2,221 +2,185 @@
 
 /* Global Styles */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(to top, #0d0007, #462d71);
-  color: #fff;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ line-height: 1.6;
+ margin: 0;
+ padding: 0;
+ background: linear-gradient(to top, #0d0007, #462d71);
+ color: #fff;
 }
 
+/* Navigation Styles */
 .nav-list {
-  list-style-type: none;
-  padding: 0;
+ list-style-type: none;
+ padding: 0;
+ display: flex; /* Use flexbox for better alignment and spacing */
+ justify-content: center; /* Center align nav items */
 }
 
 .nav-item {
-  display: inline-block;
-  margin-right: 15px;
+ margin-right: 15px;
 }
 
 .nav-link, .nav-item a {
-  text-decoration: none;
-  font-family: "Madimi One", sans-serif; /* Replace 'Your Chosen Font' with the desired font family */
-  color: #ffffff; /* Set your preferred text color */
-  font-size: 16px; /* Adjust the font size as needed */
+ text-decoration: none;
+ font-family: "Madimi One", sans-serif;
+ color: #ffffff;
+ font-size: 16px;
 }
 
-/* Styling for the active link (optional) */
 .nav-item.active a {
-  font-weight: bold; /* Add other styles as needed */
+ font-weight: bold;
 }
-
 
 /* Header Styles */
 .header {
-  background-color: rgba(0, 0, 0, 1);
-  color: #fff;
-  text-align: center;
-  padding: 1.5rem 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  transition: top 1s ease;
-  /* Add a transition for smooth appearance/disappearance */
+ background-color: rgba(0, 0, 0, 1);
+ color: #fff;
+ text-align: center;
+ padding: 1.5rem 0;
+ position: fixed;
+ top: 0;
+ width: 100%;
+ z-index: 1000;
+ transition: top 1s ease;
 }
 
-/* Header Hidden Styles */
 .header.header-hidden {
-  top: -150px;
-  /* Adjust this value to control how much the header hides */
+ top: -150px;
 }
 
 /* Container Styles */
 .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 20px;
 }
 
 /* Logo Styles */
 .logo {
-  text-align: center;
+ text-align: center;
 }
 
 .logo-image {
-  border-radius: 50%;
-  overflow: hidden;
-  width: 120px;
-  height: 120px;
-  margin: 0 auto 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+ border-radius: 50%;
+ overflow: hidden;
+ width: 120px;
+ height: 120px;
+ margin: 0 auto 20px;
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Main Content Styles */
 .main-content {
-  padding: 2rem;
-  margin-top: 80px;
+ padding: 2rem;
+ margin-top: 80px;
 }
 
 /* Section Styles */
 .section {
-  padding: 6rem 0;
+ padding: 6rem 0;
 }
 
 /* Section Title Styles */
 .section-title {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  text-align: center;
+ font-size: 2rem;
+ font-weight: bold;
+ margin-bottom: 20px;
+ text-align: center;
 }
 
 /* About Section Styles */
 .about-description {
-  font-size: 18px;
-  line-height: 1.6;
+ font-size: 18px;
+ line-height: 1.6;
 }
 
 /* Skills Section Styles */
 .skills-logos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-bottom: 1.5rem;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-wrap: wrap;
+ margin-bottom: 1.5rem;
 }
 
 .skill-logo {
-  width: 70px;
-  height: 70px;
-  margin: 25px;
-  border-radius: 100%;
-  transition: transform 0.3s ease;
+ width: 70px;
+ height: 70px;
+ margin: 25px;
+ border-radius: 100%;
+ transition: transform 0.3s ease;
 }
 
 .skill-logo:hover {
-  transform: scale(1.1);
+ transform: scale(1.1);
 }
 
 .skills-title {
-  font-size: 24px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 20px;
-  color: #007bff;
+ font-size: 24px;
+ font-weight: bold;
+ text-align: center;
+ margin-bottom: 20px;
+ color: #007bff;
 }
 
 /* Project Section Styles */
 .projects-grid {
-  display: flex;
-  flex-wrap: wrap; /* Allow projects to wrap into a new row */
-  justify-content: space-between; /* Distribute space between projects */
-}
-
-.projects-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
 }
 
 .project {
-  width: calc(33.33% - 20px);
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  padding: 10px;
-  box-sizing: border-box;
-  background-color: #272727;
-  border-radius: 8px; /* Add rounded corners */
-}
-
-/* Optional: To hide horizontal scrollbars caused by overflow */
-.project::-webkit-scrollbar {
-  display: none;
-}
-
-
-
-
-/* Animation for Fading in Projects */
-.project.fade-in {
-  opacity: 1;
-}
-
-.project-title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.project-description {
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 20px;
+ width: calc(33.33% - 20px);
+ margin-bottom: 20px;
+ border: 1px solid #ccc;
+ padding: 10px;
+ box-sizing: border-box;
+ background-color: #272727;
+ border-radius: 8px;
 }
 
 /* Button Styles */
 .btn {
-  display: inline-block;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+ display: inline-block;
+ padding: 12px 24px;
+ border: none;
+ border-radius: 5px;
+ font-size: 16px;
+ cursor: pointer;
+ transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn-primary {
-  background: linear-gradient(45deg, #00aeff, #e168ff);
-  color: #fff;
-  text-decoration: none;
-  transition: background 0.3s ease;
+ background: linear-gradient(45deg, #00aeff, #e168ff);
+ color: #fff;
+ text-decoration: none;
+ transition: background 0.3s ease;
 }
 
-/* Hover effect for the button */
 .btn-primary:hover {
-  background: linear-gradient(45deg, #7977dd, #15bdff);
+ background: linear-gradient(45deg, #7977dd, #15bdff);
 }
 
 /* Contact Section Styles */
 .contact-description {
-  font-size: 18px;
-  line-height: 1.6;
+ font-size: 18px;
+ line-height: 1.6;
 }
 
 /* Footer Styles */
 .footer {
-  text-align: center;
-  background-color: transparent;
-  color: #fff;
-  padding: 1.5rem 0;
+ text-align: center;
+ background-color: transparent;
+ color: #fff;
+ padding: 1.5rem 0;
 }
 
-/* Footer Text Styles */
 .footer-text {
-  font-size: 16px;
+ font-size: 16px;
 }
