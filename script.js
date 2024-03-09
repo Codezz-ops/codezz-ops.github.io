@@ -157,7 +157,7 @@ function main() {
                     return [4 /*yield*/, fetchProjects(apiLinks[1])];
                 case 2:
                     allProjects = __spreadArray.apply(void 0, _b.concat([(_c.sent()), true]));
-                    selectedProjects = [allProjects[5], allProjects[6], allProjects[9], allProjects[13], allProjects[16], allProjects[15]];
+                    selectedProjects = [allProjects[5], allProjects[6], allProjects[9], allProjects[17], allProjects[16], allProjects[15]];
                     populateProjects(selectedProjects);
                     return [3 /*break*/, 4];
                 case 3:
